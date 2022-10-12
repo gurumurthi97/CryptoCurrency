@@ -38,11 +38,36 @@
 }
 .chip {
   padding: 0.5rem 2rem;
-  border: 1px solid var(--green);
+  border: 2px solid var(--green);
   border-radius: 2rem;
   margin: 1.5rem 0rem;
   cursor: pointer;
+
+  font-weight: 600;
 }
-.chip p {
+/* .chip p {
   margin: 0px;
+} */
+.chip-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.trending-icon {
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  padding: 0.35rem;
+  font-size: 2.5rem;
+}
+.chip:hover {
+  background-color: var(--green);
+  color: var(--white) !important;
+  transition: all 0.3s;
+}
+.trending-icon:hover {
+  background-color: var(--green);
+  color: var(--white) !important;
+  font-size: 3rem;
+  transition: all 0.3s;
 }

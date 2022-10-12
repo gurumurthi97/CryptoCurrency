@@ -1,5 +1,6 @@
-import { green } from "@mui/material/colors";
+import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import React from "react";
+import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import "./styles.css";
 function Grid({ coin }) {
   return (
@@ -12,23 +13,41 @@ function Grid({ coin }) {
         </div>
       </div>
       <div className="data-div">
-        <div
-          className="chip"
-          style={{
-            color:
-              coin.price_change_percentage_24h > 0
-                ? "var(--green)"
-                : "var(--red)",
-            borderColor:
-              coin.price_change_percentage_24h > 0
-                ? "var(--green)"
-                : "var(--red)",
-          }}
-        >
-          {coin.price_change_percentage_24h > 0
-            ? "+" + coin.price_change_percentage_24h
-            : coin.price_change_percentage_24h}
-        </div>
+        {coin.price_change_percentage_24h > 0 ? (
+          <div className="chip-flex">
+            <div
+              className="chip"
+              style={{
+                color: "var(--green)",
+
+                borderColor: "var(--green)",
+              }}
+            >
+              {"+" + coin.price_change_percentage_24h}
+            </div>
+            <TrendingUpRoundedIcon
+              className="trending-icon"
+              style={{ color: "var(--green)", borderColor: "var(--green)" }}
+            />
+          </div>
+        ) : (
+          <div className="chip-flex">
+            <div
+              className="chip"
+              style={{
+                color: "var(--red)",
+
+                borderColor: "var(--red)",
+              }}
+            >
+              {coin.price_change_percentage_24h + "%"}
+            </div>
+            <TrendingDownRoundedIcon
+              className="trending-icon"
+              style={{ color: "var(--red)", borderColor: "var(--red)" }}
+            />
+          </div>
+        )}
       </div>
     </div>
   );
