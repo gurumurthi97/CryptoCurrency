@@ -71,3 +71,6 @@
   font-size: 3rem;
   transition: all 0.3s;
 }
+.rand:hover {
+  background-color: var(--red);
+}

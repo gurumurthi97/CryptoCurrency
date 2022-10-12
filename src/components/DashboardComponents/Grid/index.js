@@ -33,7 +33,7 @@ function Grid({ coin }) {
         ) : (
           <div className="chip-flex">
             <div
-              className="chip"
+              className="chip rand"
               style={{
                 color: "var(--red)",
 
@@ -43,7 +43,7 @@ function Grid({ coin }) {
               {coin.price_change_percentage_24h + "%"}
             </div>
             <TrendingDownRoundedIcon
-              className="trending-icon"
+              className="trending-icon rand"
               style={{ color: "var(--red)", borderColor: "var(--red)" }}
             />
           </div>
