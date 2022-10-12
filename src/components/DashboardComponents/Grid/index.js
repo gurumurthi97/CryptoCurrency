@@ -26,6 +26,7 @@ function Grid({ coin }) {
               {"+" + coin.price_change_percentage_24h}
             </div>
             <TrendingUpRoundedIcon
+              fontSize="2rem"
               className="trending-icon"
               style={{ color: "var(--green)", borderColor: "var(--green)" }}
             />
@@ -44,10 +45,14 @@ function Grid({ coin }) {
             </div>
             <TrendingDownRoundedIcon
               className="trending-icon rand"
+              fontSize="2rem"
               style={{ color: "var(--red)", borderColor: "var(--red)" }}
             />
           </div>
         )}
+
+        <p>{coin.current_price}</p>
+        <p>{coin.market_cap}</p>
       </div>
     </div>
   );
